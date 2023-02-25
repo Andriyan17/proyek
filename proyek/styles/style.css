@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: inline;
+}
+
+nav {
+    background-color: #fffffe;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav h1 {
+    color: #33272a;
+    margin: 10px 20px;
+}
+
+nav a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #33272a;
+    padding: 0 20px;
+}
+
+nav a:hover {
+    color: #ff8ba7;
+}
+
+.beranda {
+    background-image: url(../img/bg.png);
+    height: 800px;
+    background-position: 0px -150px;
+    background-repeat: no-repeat;
+}
+.beranda h2 {
+    padding: 60px 30px 0px;
+    font-size: 40px;
+    color: #33272a;
+}
+
+.beranda p {
+    padding: 10px 30px;
+    max-width: 400px;
+    color: #594a4e;
+}
+.beranda button {
+    width: 100px;
+    height: 50px;
+    background-color: #ff8ba7;
+    border: none;
+    border-radius: 10px;
+    color: #33272a;
+    font-weight: bold;
+}
+
+.row img {
+    height: 400px;
+    float: left;
+    padding-left: 20px;
+}
+.container{
+    float: left;
+    color: #594a4e;
+    padding-left: 300px;
+    width: 600px;
+    box-sizing: border-box;
+}
+
+.profile-wrapper{
+    margin: 10px;
+  
+  }
+  
+  .profile .card {
+    background: #faeee7;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #594a4e;
+  }
+  .profile .card img{
+    width: 10%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  footer{
+    margin: 20px;
+    text-align: center;
+    color: #594a4e;
+  }
+
+
