@@ -8,63 +8,46 @@
     <title>MyWeb</title>
   </head>
   <body>
-      <header>
-        <nav>
-          <h1>ITGenius</h1>
-          <ul class="navigation">
-            <li><a href="#content">Beranda</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#me">Profile</a></li>
-          </ul>
-        </nav>
-      </header>
+    <header>
+      <h1>ITGenius</h1>
+      <button id="hamburger-button" class="hamburger">
+        ☰
+      </button>
+      <nav>
+        <ul class="navigation">
+          <li><a href="#content">Beranda</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <main>
+      <div id="content">
+        <article class= "beranda">
+          <h2>Make your code better</h2>
+          <p>
+            Sebagai perusahaan IT yang terkemuka, kami berkomitmen untuk
+            memberikan solusi teknologi informasi terbaik untuk memenuhi
+            kebutuhan bisnis dan organisasi Anda.
+          </p>
+        </article>
+      </div>
+    </main>
+        
+      <section id="about" class="about">
+        <aside>
+          <img src="../proyek/img/profile.jpg" alt="profile">
+          <div class="profile-content">
+            <h3>Andriyan Ginting</h3>
+            <p>Saya adalah Mahasiswa Teknik Informatika dari Universitas Malikussaleh yang memiliki minat pada dunia pemograman web, serta memiliki cita-cita untuk menjadi seorang web developer di kemudian hari.</p>
+          </div>
+        </aside>
+      </section>
 
-      <main>
-        <div id="content">
-          <article class="beranda">
-            <h2>
-              Make your code better
-            </h2>
-            <p>Sebagai perusahaan IT yang terkemuka, kami berkomitmen untuk memberikan solusi teknologi informasi terbaik untuk memenuhi kebutuhan bisnis dan organisasi Anda.<p>
-            <button type="submit">Hubungi</button>
-          </article>
-
-          <section>
-            <div id="about" class="company cf">
-                <article>
-                    <figure class="row ">
-                        <img src="img/about.jpg" alt="">
-                    </figure>
-                    <div class="container">
-                        <h2>
-                            Kenalin Lebih Jauh !
-                        </h2>
-                        <p>Visi kami adalah menjadi perusahaan IT terdepan di dunia, dengan memberikan solusi teknologi informasi yang inovatif, terdepan, dan berkualitas tinggi kepada pelanggan kami.</p>
-                    </div>
-                </article>
-            </div>
-          </section>
-            <aside class="profile" id="me">
-                <div class="my-profile">
-                    <div class="profile-wraper">
-                            <div class="card">
-                                    <figure>
-                                        <img src="img/profile.jpg" alt="image">
-                                    </figure>
-                                    <div>
-                                        <h2>Andriyan Ginting</h2>
-                                        <p>Saya merupakan seorang mahasiswa di Universitas Malikussaleh, pada saat ini saya sedang menempuh semester 6.</p>
-                                    </div>
-                            </div>
-                    </div>
-                </div>
-            </aside>
-        </div>
-      </main>
-
-      <footer>
+       <footer>
         <p>Belajar Dasar Pemrograman Web &#169; 2023, Dicoding Academy</p>
       </footer>
+
+    <script src="./js/toggle.js"></script>
   </body>
 </html>

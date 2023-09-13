@@ -1,133 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
- .cf:before,
- .cf:after {
-     content: " "; /* 1 */
-     display: table; /* 2 */
- }
- 
- .cf:after {
-     clear: both;
- }
- 
- /**
-  * For IE 6/7 only
-  * Include this rule to trigger hasLayout and contain floats.
-  */
- .cf {
-     *zoom: 1;
- }
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 * {
-    margin: 0;
     padding: 0;
-}
-
-body {
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-header {
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    padding: 10px;
     display: inline;
+    margin-right: 20px;
+    
 }
-
-nav {
-    background-color: #fffffe;
-    padding: 5px;
-    position: sticky;
-    top: 0;
-}
-
-nav li {
-    display: inline-block;
-}
-
-nav h1 {
-    color: #33272a;
-    margin: 10px 20px;
-}
-
-nav a {
-    font-weight: bold;
+.navigation li a {
+    color: #fff;
+    list-style: none;
     text-decoration: none;
-    color: #33272a;
-    padding: 0 20px;
-}
-
-nav a:hover {
-    color: #ff8ba7;
 }
 
 .beranda {
-    background-image: url(../img/bg.png);
-    height: 800px;
-    background-position: 0px -150px;
-    background-repeat: no-repeat;
-}
-.beranda h2 {
-    padding: 60px 30px 0px;
-    font-size: 40px;
-    color: #33272a;
-}
-
-.beranda p {
-    padding: 10px 30px;
-    max-width: 400px;
-    color: #594a4e;
-}
-.beranda button {
-    width: 100px;
-    height: 50px;
-    background-color: #ff8ba7;
-    border: none;
-    border-radius: 10px;
-    color: #33272a;
-    font-weight: bold;
-}
-
-.row img {
-    height: 400px;
-    float: left;
-    padding-left: 20px;
-}
-.container{
-    float: left;
-    color: #594a4e;
-    padding-left: 300px;
-    width: 600px;
-    box-sizing: border-box;
-}
-
-.profile-wrapper{
-    margin: 10px;
-  
-  }
-  
-  .profile .card {
-    background: #faeee7;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
     text-align: center;
-    padding-bottom: 20px;
-    color: #594a4e;
-  }
-  .profile .card img{
-    width: 10%;
+}
+
+.beranda h2, .beranda p {
+    padding: 12px;
+    max-width:40rem ;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.about {
+    padding: 50px;
+}
+
+.about aside {
+    display: flex;
+}
+
+.about img {
+    width: 40%;
     border-radius: 20px;
     margin-bottom: 10px;
     margin-top: 20px;
-  }
+}
 
-  footer{
-    margin: 20px;
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 50rem;
+}
+
+footer {
+    padding: 20px;
     text-align: center;
-    color: #594a4e;
-  }
+    color: #000;
+    background-color: slategray;
+}
 
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-evenly
+    }
 
+    .hamburger {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: slategray;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .navigation li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .about aside{
+        display: block;
+    }
+
+    .about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        aside {
+            text-align: center;
+            /* Pusat teks secara horizontal jika diperlukan */
+        }
+
+}
